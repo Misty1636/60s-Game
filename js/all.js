@@ -78,9 +78,8 @@ class PlayGame {
     this.getNum();
   }
 
-  getAnswer() {
-    this.result = document.querySelector('.palying__question__enter').value;
-    document.querySelector('.palying__question__enter').value = '';
+  getAnswer(answer) {
+    this.result = answer;
     this.checkReslut();
   }
 
@@ -132,7 +131,6 @@ class PlayGame {
 
   displayReslut() {
     if (this.temScore > 10) document.querySelector('.clapping').play();
-    document.querySelector('.palying__question__enter').value = '';
     document.querySelector('.end__score').textContent = this.temScore;
     document.querySelector('.palying').classList.remove('isActive');
     document.querySelector('.end').classList.add('isActive');
@@ -170,11 +168,15 @@ startBtn.addEventListener('click', () => {
 
 playing.addEventListener('keyup', (e) => {
   const key = e.keyCode || e.which || e.charcode;
-  if (key === 13 || key === 108) NewGame.getAnswer();
+  if (key === 13 || key === 108) {
+    NewGame.getAnswer(playing.value);
+    playing.value = '';
+  }
 });
 
 resetBtn.addEventListener('click', () => {
   NewGame = null;
+  playing.value = '';
   document.querySelector('.clapping').pause();
   document.querySelector('.clapping').currentTime = 0;
   document.querySelector('.end').classList.remove('isActive');
