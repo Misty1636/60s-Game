@@ -179,5 +179,4 @@ resetBtn.addEventListener('click', () => {
   document.querySelector('.clapping').currentTime = 0;
   document.querySelector('.end').classList.remove('isActive');
   document.querySelector('.start').classList.add('isActive');
-  NewGame = new PlayGame();
 });
