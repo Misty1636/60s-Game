@@ -146,6 +146,110 @@ input[type="number"]{
   }
 }
 
+.palying {
+  display: none;
+  font-weight: bold;
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+    &__title {
+      font-size: 30px;
+      color: $white;
+      border: 4px solid $white;
+      padding: 0.5rem 1rem;
+    }
+    &__scores {
+      display: flex;
+      align-items: center;
+    }
+    &__text {
+      font-size: 30px;
+      background: $white;
+      color: $bright;
+      padding: 0.8rem 1rem;
+    }
+    &__score {
+      font-size: 44px;
+      color: $dark;
+      margin-left: 0.5rem;
+    }
+  }
+  &__time {
+    margin-left: 140px;
+    font-size: 96px;
+    color: $white;
+    font-style: italic;
+    animation: color-change 60s linear, scale 1s cubic-bezier(0.71, -0.63, 0.26, 1.54) infinite;
+  }
+  &__question {
+    display: flex;
+    align-items: center;
+    font-size: 112px;
+    color: $dark;
+    justify-content: space-between;
+    &__operation,
+    &__equal {
+      color: $white;
+    }
+    &__result {
+      display: flex;
+      justify-content: center;
+    }
+    &__enter {
+      text-align: center;
+      background: $white;
+      font-size: 112px;
+      max-width: 240px;
+      border: none;
+      outline: 0;
+      transition: all 0.3s;
+      &:focus {
+        box-shadow: 0 0 15px rgba($dark, 0.7);
+      }
+    }
+    &__text {
+      position: absolute;
+      font-size: 24px;
+      color: $white;
+      font-weight: normal;
+      font-style: italic;
+      align-self: flex-end;
+      margin-top: 30px;
+      animation: skew 1.2s linear infinite;
+    }
+  }
+}
+
+.end {
+  display: none;
+  font-weight: bold;
+  text-align: center;
+  color: $dark;
+  &__title {
+    display: inline-block;
+    font-size: 30px;
+    color: $white;
+    border: 4px solid $white;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5em;
+  }
+  &__text {
+    font-size: 56px;
+    margin-bottom: 1rem;
+    span {
+      color: $white;
+    }
+  }
+  &__score {
+    font-size: 112px;
+    margin-bottom: 125px;
+  }
+  &__reset {
+    border: none;
+  }
+}
+
 @keyframes pos {
   from {
     background-position: 0 0;
@@ -276,124 +380,5 @@ input[type="number"]{
 
   50% {
     transform: scale(1.05);
-  }
-
-  // 40% {
-  //   opacity: 0.2;
-  //   transform: translateX(-50%);
-  // }
-  
-  // 60% {
-  //   opacity: 0.3;
-  //   transform: translateX(0);
-  // }
-
-  // 80% {
-  //   opacity: 0.4;
-  //   transform: translateX(-25%);
-  // }
-}
-
-.palying {
-  display: none;
-  font-weight: bold;
-  &__info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 110px;
-    &__title {
-      font-size: 30px;
-      color: $white;
-      border: 4px solid $white;
-      padding: 0.5rem 1rem;
-    }
-    &__scores {
-      display: flex;
-      align-items: center;
-    }
-    &__text {
-      font-size: 30px;
-      background: $white;
-      color: $bright;
-      padding: 0.8rem 1rem;
-    }
-    &__score {
-      font-size: 44px;
-      color: $dark;
-      margin-left: 0.5rem;
-    }
-  }
-  &__time {
-    margin-left: 140px;
-    font-size: 96px;
-    color: $white;
-    font-style: italic;
-    animation: color-change 60s linear, scale 1s cubic-bezier(0.71, -0.63, 0.26, 1.54) infinite;
-  }
-  &__question {
-    display: flex;
-    align-items: center;
-    font-size: 112px;
-    color: $dark;
-    justify-content: space-between;
-    &__operation,
-    &__equal {
-      color: $white;
-    }
-    &__result {
-      display: flex;
-      justify-content: center;
-    }
-    &__enter {
-      text-align: center;
-      background: $white;
-      font-size: 112px;
-      max-width: 240px;
-      border: none;
-      outline: 0;
-      transition: all 0.3s;
-      &:focus {
-        box-shadow: 0 0 15px rgba($dark, 0.7);
-      }
-    }
-    &__text {
-      position: absolute;
-      font-size: 24px;
-      color: $white;
-      font-weight: normal;
-      font-style: italic;
-      align-self: flex-end;
-      margin-top: 30px;
-      animation: skew 1.2s linear infinite;
-    }
-  }
-}
-
-.end {
-  display: none;
-  font-weight: bold;
-  text-align: center;
-  color: $dark;
-  &__title {
-    display: inline-block;
-    font-size: 30px;
-    color: $white;
-    border: 4px solid $white;
-    padding: 0.5rem 1rem;
-    margin-bottom: 0.5em;
-  }
-  &__text {
-    font-size: 56px;
-    margin-bottom: 1rem;
-    span {
-      color: $white;
-    }
-  }
-  &__score {
-    font-size: 112px;
-    margin-bottom: 125px;
-  }
-  &__reset {
-    border: none;
   }
 }

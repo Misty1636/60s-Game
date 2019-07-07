@@ -64,7 +64,7 @@ class PlayGame {
           ary.push(i);
         }
       }
-      if (ary.length < 2) {
+      if (ary.length < 1) {
         this.getNum();
         return;
       }
