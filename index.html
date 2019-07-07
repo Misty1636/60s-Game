@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>60 Seconds</title>
+  <link rel="icon" href="img/favicon-60S.ico">
+  <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+  <div class="start isActive">
+    <div class="loading"></div>
+    <div class="start__title">
+      <div class="start__title__num">60</div>
+      <div class="start__title__text">
+        SECONDS
+        <span>+−×÷</span> 
+        <br>
+        CHALLENGE
+      </div>
+    </div>
+    <div class="start__confirm">
+      <button class="start__confirm__btn btn">START!</button>
+      <span class="start__confirm__text">try to answer more as you can</span>
+    </div>
+  </div>
+
+  <div class="palying">
+    <div class="palying__info">
+      <div>
+        <div class="palying__info__title">60 SECONDS CHALLENGE</div>
+        <div class="palying__info__scores">
+          <span class="palying__info__text">SCORE</span>
+          <span class="palying__info__score">000</span>
+        </div>
+      </div>
+      <div class="palying__time"></div>
+    </div>
+    <div class="palying__question">
+      <div class="palying__question__firstNum"></div>
+      <div class="palying__question__operation"></div>
+      <div class="palying__question__secondNum"></div>
+      <div class="palying__question__equal">=</div>
+      <div class="palying__question__result">
+        <input type="number" class="palying__question__enter" value="" autofocus>
+        <span class="palying__question__text">press enter to answer</span>
+      </div>
+    </div>
+    <audio src="audio/success.mp3" class="success"></audio>
+    <audio src="audio/fail.mp3" class="fail"></audio>
+  </div>
+  
+  <div class="end">
+    <div class="end__title">60 SECONDS CHALLENGE</div>
+    <div class="end__text"><span>—</span> YOUR FINAL SCORE <span>—</span></div>
+    <div class="end__score">74</div>
+    <button class="end__reset btn">TRY AGAIN!</button>
+    <audio src="audio/clapping.mp3" class="clapping"></audio>
+  </div>
+
+  <script src="js/all.js"></script>
+</body>
+</html>
