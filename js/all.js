@@ -109,7 +109,7 @@ class PlayGame {
       document.querySelector('.success').currentTime = 0;
       document.querySelector('.success').play();
     }
-    if (this.temScore > 0 && str.toString() !== this.result) {
+    if (this.temScore > 0 && String(str) !== this.result) {
       this.temScore -= 1;
     }
 
@@ -145,8 +145,8 @@ class PlayGame {
       this.timeSec = this.totalTime;
     }
 
-    if (this.timeMin.toString().length === 1) this.timeMin = `0${this.timeMin}`;
-    if (this.timeSec.toString().length === 1) this.timeSec = `0${this.timeSec}`;
+    if (String(this.timeMin).length === 1) this.timeMin = `0${this.timeMin}`;
+    if (String(this.timeSec).length === 1) this.timeSec = `0${this.timeSec}`;
 
     if (this.totalTime <= 40 && this.totalTime > 20) this.level = 2;
     if (this.totalTime <= 20) this.level = 3;
