@@ -161,6 +161,8 @@ const playing = document.querySelector('.palying__question__enter');
 const resetBtn = document.querySelector('.end__reset');
 
 startBtn.addEventListener('click', () => {
+  document.querySelector('.rain').pause();
+  document.querySelector('.rain').currentTime = 0;
   document.querySelector('.start').classList.remove('isActive');
   document.querySelector('.palying').classList.add('isActive');
   NewGame = new PlayGame();
@@ -181,4 +183,6 @@ resetBtn.addEventListener('click', () => {
   document.querySelector('.clapping').currentTime = 0;
   document.querySelector('.end').classList.remove('isActive');
   document.querySelector('.start').classList.add('isActive');
+  document.querySelector('.rain').currentTime = 0;
+  document.querySelector('.rain').play();
 });
